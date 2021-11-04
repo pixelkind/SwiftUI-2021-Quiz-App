@@ -8,9 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var startGame = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            VStack {
+                NavigationLink(isActive: $startGame) {
+                    QuestionView()
+                } label: {
+                    EmptyView()
+                }
+
+                
+                Button {
+                    startGame.toggle()
+                } label: {
+                    Text("Start Game")
+                }
+            }
+            .navigationTitle("Quiz")
+        }
     }
 }
 
