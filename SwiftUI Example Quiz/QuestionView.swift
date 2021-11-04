@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct QuestionView: View {
+    let question: Question
+    
     var body: some View {
         VStack {
-            Text("This is the question")
+            Text(question.question)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color.blue)
                 .foregroundColor(.white)
@@ -36,6 +38,6 @@ struct QuestionView: View {
 
 struct QuestionView_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionView()
+        QuestionView(question: Question(category: "", type: "", difficulty: .easy, question: "", correctAnswer: "", incorrectAnswers: ["", "", ""]))
     }
 }
