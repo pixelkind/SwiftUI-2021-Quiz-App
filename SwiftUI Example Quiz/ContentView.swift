@@ -16,7 +16,9 @@ struct ContentView: View {
             ZStack {
                 VStack {
                     NavigationLink(isActive: $startGame) {
-                        QuestionView(question: game.nextQuestion)
+                        if let question = game.nextQuestion {
+                            QuestionView(question: question, game: game)
+                        }
                     } label: {
                         EmptyView()
                     }

@@ -15,13 +15,18 @@ class GameModel: ObservableObject {
     @Published var questionSet: QuestionSet?
     @Published var isLoading = false
     var amountOfQuestions = 5
+    private(set) var questionIndex = 0
     
-    var nextQuestion: Question {
-        if let questionSet = questionSet, questionSet.results.count > 0 {
-            return questionSet.results[0]
+    var nextQuestion: Question? {
+        if let questionSet = questionSet, questionSet.results.count > questionIndex {
+            return questionSet.results[questionIndex]
         } else {
-            return Question(category: "", type: "", difficulty: .easy, question: "", correctAnswer: "", incorrectAnswers: ["", "", ""])
+            return nil
         }
+    }
+    
+    func incrementQuestionIndex() {
+        questionIndex += 1
     }
     
     func fetch() {
