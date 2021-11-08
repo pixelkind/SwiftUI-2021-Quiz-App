@@ -21,6 +21,10 @@ struct ContentView: View {
                         EmptyView()
                     }
 
+                    Image("Logo")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(maxWidth: .infinity)
                     
                     Button {
                         game.fetch()
