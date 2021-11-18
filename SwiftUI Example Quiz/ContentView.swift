@@ -29,20 +29,21 @@ struct ContentView: View {
                         .frame(maxWidth: .infinity)
                     
                     Button {
-                        game.fetch()
+                        game.remote.fetch()
+//                        game.fetch()
     //                    startGame.toggle()
                     } label: {
                         Text("Start Game")
                     }
                 }
                 
-                if game.isLoading {
+                if game.remote.isLoading {
                     Color.white
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                     ProgressView()
                 }
             }
-            .onChange(of: game.isLoading, perform: { newValue in
+            .onChange(of: game.remote.isLoading, perform: { newValue in
                 if newValue == false {
                     startGame.toggle()
                 }

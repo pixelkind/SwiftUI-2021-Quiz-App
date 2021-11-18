@@ -18,6 +18,7 @@
 		6F11C40E2733D394003510B9 /* QuestionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F11C40D2733D394003510B9 /* QuestionSet.swift */; };
 		6F7609FC273918C900F1245C /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6F7609FA273918C900F1245C /* Main.xcdatamodeld */; };
 		6F7609FE2739190F00F1245C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7609FD2739190F00F1245C /* Persistence.swift */; };
+		6FDA2A522746345D003BCE0E /* Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDA2A512746345D003BCE0E /* Remote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		6F11C40D2733D394003510B9 /* QuestionSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionSet.swift; sourceTree = "<group>"; };
 		6F7609FB273918C900F1245C /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		6F7609FD2739190F00F1245C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		6FDA2A512746345D003BCE0E /* Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				6F11C3FC2733CAE5003510B9 /* Preview Content */,
 				6F7609FA273918C900F1245C /* Main.xcdatamodeld */,
 				6F7609FD2739190F00F1245C /* Persistence.swift */,
+				6FDA2A512746345D003BCE0E /* Remote.swift */,
 			);
 			path = "SwiftUI Example Quiz";
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F7609FE2739190F00F1245C /* Persistence.swift in Sources */,
+				6FDA2A522746345D003BCE0E /* Remote.swift in Sources */,
 				6F11C40A2733CEDE003510B9 /* GameModel.swift in Sources */,
 				6F11C40E2733D394003510B9 /* QuestionSet.swift in Sources */,
 				6F11C3F92733CAE3003510B9 /* ContentView.swift in Sources */,
