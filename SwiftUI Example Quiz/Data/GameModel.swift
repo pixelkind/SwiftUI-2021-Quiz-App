@@ -11,6 +11,7 @@ import Combine
 class GameModel: ObservableObject {
     
     private var cancellableTask: AnyCancellable?
+    private var anyCancellable: AnyCancellable?
     
     @Published var questionSet: QuestionSet?
     @Published var isLoading = false
@@ -29,6 +30,9 @@ class GameModel: ObservableObject {
     
     init() {
         remote = Remote(url: URL(string: "https://opentdb.com/api.php?amount=5&type=multiple")!)
+        anyCancellable = remote.objectWillChange.sink(receiveValue: { [weak self] in
+            self?.objectWillChange.send()
+        })
     }
     
     func incrementQuestionIndex() {
